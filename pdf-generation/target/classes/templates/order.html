@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Order Details</title>
+    <link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
+<body class="flex items-center justify-center h-screen">
+<div class="rounded-lg border shadow-lg p-10 w-3/5">
+    <div class="flex flex-row justify-between pb-4">
+        <div>
+            <h2 class="text-xl font-bold">Order # <span class="text-green-600" th:text="${orderEntry.orderId}"></span>
+            </h2>
+        </div>
+    </div>
+    <table class="table-fixed w-full border rounded">
+        <tr>
+            <td>
+    <div class="flex flex-col pb-4">
+        <div class="pb-2">
+            <h2 class="text-xl font-bold">Seller</h2>
+        </div>
+
+
+        <div th:text="${orderEntry.seller}"></div>
+        <div th:text="${orderEntry.sellerGstin}"></div>
+        <div th:text="${orderEntry.sellerAddress}"></div>
+
+    </div>
+            </td>
+            <td>
+    <div class="flex flex-col pb-4">
+        <div class="pb-2">
+            <h2 class="text-xl font-bold">Buyer</h2>
+        </div>
+        <div th:text="${orderEntry.buyer}"></div>
+        <div th:text="${orderEntry.buyerGstin}"></div>
+        <div th:text="${orderEntry.buyerAddress}"></div>
+
+    </div>
+            </td>
+    </table>
+    <table class="table-fixed w-full  border rounded">
+        <thead class="bg-gray-100">
+        <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody class="border">
+        <tr  class="border" th:each="item : ${orderEntry.items}">
+            <td class="border" th:text="${item.name}"></td>
+            <td class="border" th:text="${item.quantity}"></td>
+            <td class="border" th:text="${item.rate}"></td>
+            <td class="border" th:text="${item.amount}"></td>
+        </tr>
+        </tbody>
+</div>
+</body>
+</html>

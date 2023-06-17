@@ -1,0 +1,16 @@
+spring:
+  thymeleaf:
+    cache : false
+  application:
+    name: PDF Generation Service
+
+pdf:
+  order:
+    bean:
+      location: D:\\order\\
+  local:
+    storage:
+      location: D:\\pdf\\
+
+server:
+  port: 8081

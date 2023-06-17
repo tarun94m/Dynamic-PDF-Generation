@@ -1,0 +1,4 @@
+com\assignment\pdfgeneration\service\PdfLocalStorageServiceTest.class
+com\assignment\pdfgeneration\controller\PDFGenerationControllerTest.class
+com\assignment\pdfgeneration\service\PdfGenerationServiceTest.class
+com\assignment\pdfgeneration\DynamicPdfGenerationTests.class

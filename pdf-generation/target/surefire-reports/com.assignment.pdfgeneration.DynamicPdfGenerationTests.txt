@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.assignment.pdfgeneration.DynamicPdfGenerationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.332 s <<< FAILURE! - in com.assignment.pdfgeneration.DynamicPdfGenerationTests
+com.assignment.pdfgeneration.DynamicPdfGenerationTests  Time elapsed: 0.329 s  <<< ERROR!
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [C:\Users\TARUN\Desktop\Freightfox\pdf-generation\target\test-classes\com\assignment\pdfgeneration\DynamicPdfGenerationTests.class]; nested exception is org.springframework.core.NestedIOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [C:\Users\TARUN\Desktop\Freightfox\pdf-generation\target\test-classes\com\assignment\pdfgeneration\DynamicPdfGenerationTests.class]; nested exception is java.lang.IllegalArgumentException: Unsupported class file major version 64
+Caused by: org.springframework.core.NestedIOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [C:\Users\TARUN\Desktop\Freightfox\pdf-generation\target\test-classes\com\assignment\pdfgeneration\DynamicPdfGenerationTests.class]; nested exception is java.lang.IllegalArgumentException: Unsupported class file major version 64
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 64
+
